@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/POC_-Full_Stack_Application_development_ReactJS/static/css/main.fb16c8d2.css",
-    "main.js": "/POC_-Full_Stack_Application_development_ReactJS/static/js/main.507347a5.js",
-    "static/js/787.610efe8e.chunk.js": "/POC_-Full_Stack_Application_development_ReactJS/static/js/787.610efe8e.chunk.js",
-    "static/media/logo.svg": "/POC_-Full_Stack_Application_development_ReactJS/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/POC_-Full_Stack_Application_development_ReactJS/index.html",
-    "main.fb16c8d2.css.map": "/POC_-Full_Stack_Application_development_ReactJS/static/css/main.fb16c8d2.css.map",
-    "main.507347a5.js.map": "/POC_-Full_Stack_Application_development_ReactJS/static/js/main.507347a5.js.map",
-    "787.610efe8e.chunk.js.map": "/POC_-Full_Stack_Application_development_ReactJS/static/js/787.610efe8e.chunk.js.map"
+    "main.css": "/FDREACTJSPOC/static/css/main.fb16c8d2.css",
+    "main.js": "/FDREACTJSPOC/static/js/main.0d8182b8.js",
+    "static/js/787.610efe8e.chunk.js": "/FDREACTJSPOC/static/js/787.610efe8e.chunk.js",
+    "static/media/logo.svg": "/FDREACTJSPOC/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/FDREACTJSPOC/index.html",
+    "main.fb16c8d2.css.map": "/FDREACTJSPOC/static/css/main.fb16c8d2.css.map",
+    "main.0d8182b8.js.map": "/FDREACTJSPOC/static/js/main.0d8182b8.js.map",
+    "787.610efe8e.chunk.js.map": "/FDREACTJSPOC/static/js/787.610efe8e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fb16c8d2.css",
-    "static/js/main.507347a5.js"
+    "static/js/main.0d8182b8.js"
   ]
 }
