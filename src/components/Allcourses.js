@@ -24,16 +24,13 @@ const Allcourses=()=>{
      // Function to call server
      const getAllCoursesFromServer=()=>{
 
-        let config = {
-            headers: {
+        const headers = {
                 "Access-Control-Allow-Headers": "*",
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Methods": "*"
-            },
-            
-        }
+                };
 
-         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{config}).then(
+         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{headers}).then(
              (response)=>{
                 //success
                 //console.log(response);
