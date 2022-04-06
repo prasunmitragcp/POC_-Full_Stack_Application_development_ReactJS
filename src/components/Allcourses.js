@@ -69,12 +69,8 @@ const Allcourses=()=>{
              });
          }
      );
-    
 
-
-
-
-     } ;
+     };
 
      //Calling loading course from server
 
