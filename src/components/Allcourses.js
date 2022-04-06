@@ -26,12 +26,14 @@ const Allcourses=()=>{
 
         let config = {
             headers: {
-                'Access-Control-Allow-Origin': '*'
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods' : "GET",
+
             },
             
         }
 
-         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`).then(
+         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{config}).then(
              (response)=>{
                 //success
                 //console.log(response);
