@@ -1,7 +1,7 @@
 {
   "name": "fdreactjspoc",
   "version": "0.1.0",
-  "proxy": "http://javamicroservices.uc.r.appspot.com",
+  "proxy": "https://javamicroservices.uc.r.appspot.com",
   "private": true,
   "homepage": "http://prasunmitragcp.github.io",
   "dependencies": {
