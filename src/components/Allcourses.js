@@ -24,15 +24,7 @@ const Allcourses=()=>{
      // Function to call server
      const getAllCoursesFromServer=()=>{
 
-        const headers = {
-                "Access-Control-Allow-Headers": "*",
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "*"
-                };
-        axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
-             headers: {}
-            }).then(
+         axios.get(`/dbcollection`).then(
              (response)=>{
                 //success
                 //console.log(response);
