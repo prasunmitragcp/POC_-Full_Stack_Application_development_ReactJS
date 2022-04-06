@@ -54,12 +54,11 @@ const Allcourses=()=>{
 
 
          fetch(`/dbcollection`)
-         .then((response) => response.json())
-         .then((repos) => { console.log(repos.data);
+         .then((response) => { console.log(response.data);
             toast.success("The courses have been loaded", {
                 position: "bottom-center",
             });
-            setCourses(repos.data);
+            setCourses(response.data);
          },
          (error)=>{
              // For error
