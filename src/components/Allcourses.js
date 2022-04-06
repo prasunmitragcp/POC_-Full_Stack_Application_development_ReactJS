@@ -31,10 +31,9 @@ const Allcourses=()=>{
             
         }
 
-
-         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`, {
+         axios.get(`/dbcollection`, {
              headers: {
-                 'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+                 "Content-Type": "Application/json"
              }
          }).then(
              (response)=>{
