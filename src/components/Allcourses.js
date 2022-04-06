@@ -24,11 +24,17 @@ const Allcourses=()=>{
      // Function to call server
      const getAllCoursesFromServer=()=>{
 
-         axios.get(`/dbcollection`,{
+        let config = {
+            headers: {
+                'Access-Control-Allow-Origin': '*'
+            },
+            
+        }
+
+         axios.get(`http://javamicroservices.uc.r.appspot.com/dbcollection`, {
              headers: {
-                 "Content-Type": "application/json",
-                 "Accept": "application/json"
-             },
+                 'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+             }
          }).then(
              (response)=>{
                 //success
