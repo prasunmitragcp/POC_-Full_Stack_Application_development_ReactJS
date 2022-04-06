@@ -33,7 +33,7 @@ const Allcourses=()=>{
 
          axios.get(`/dbcollection`, {
              headers: {
-                 "Content-Type": "Application/json"
+                 "Content-Type": "application/json"
              }
          }).then(
              (response)=>{
