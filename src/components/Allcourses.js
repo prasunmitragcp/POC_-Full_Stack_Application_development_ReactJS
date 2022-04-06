@@ -24,7 +24,12 @@ const Allcourses=()=>{
      // Function to call server
      const getAllCoursesFromServer=()=>{
 
-         axios.get(`/dbcollection`).then(
+         axios.get(`/dbcollection`,{
+             headers: {
+                 "Content-Type": "application/json",
+                 "Accept": "application/json"
+             },
+         }).then(
              (response)=>{
                 //success
                 //console.log(response);
