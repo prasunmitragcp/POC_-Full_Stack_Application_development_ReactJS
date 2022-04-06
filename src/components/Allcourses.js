@@ -29,9 +29,9 @@ const Allcourses=()=>{
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Methods": "*"
                 };
-
+        axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
          axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
-             headers: {"Access-Control-Allow-Origin": "*"}
+             headers: {}
             }).then(
              (response)=>{
                 //success
