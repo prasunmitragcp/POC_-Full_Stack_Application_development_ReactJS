@@ -58,6 +58,7 @@ const Allcourses=()=>{
             toast.success("The courses have been loaded", {
                 position: "bottom-center",
             });
+            console.log("Loaded data: "+response.data);
             setCourses(response.data);
          },
          (error)=>{
