@@ -31,7 +31,7 @@ const Allcourses=()=>{
             
         }
 
-         axios.get(`http://javamicroservices.uc.r.appspot.com/dbcollection`).then(
+         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`).then(
              (response)=>{
                 //success
                 //console.log(response);
