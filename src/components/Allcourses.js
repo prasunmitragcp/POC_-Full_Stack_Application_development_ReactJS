@@ -30,7 +30,9 @@ const Allcourses=()=>{
                 "Access-Control-Allow-Methods": "*"
                 };
 
-         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{headers}).then(
+         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
+             headers: {"Access-Control-Allow-Origin": "*"}
+            }).then(
              (response)=>{
                 //success
                 //console.log(response);
