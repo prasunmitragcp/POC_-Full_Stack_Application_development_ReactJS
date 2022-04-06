@@ -31,25 +31,33 @@ const Allcourses=()=>{
             
         }
 
-        fetch(`/dbcollection`).then(
-             (response)=>{
-                //success
-                //console.log(response);
+        //  axios.get(`/dbcollection`).then(
+        //      (response)=>{
+        //         //success
+        //         //console.log(response);
                 
-                console.log(response.data);
-                toast.success("The courses have been loaded", {
-                    position: "bottom-center",
-                });
-                setCourses(response.data);
-             },
-             (error)=>{
-                 // For error
-                 console.log(error);
-                 toast.error("Something went wrong", {
-                     position: "bottom-center",
-                 });
-             }
-         );
+        //         console.log(response.data);
+        //         toast.success("The courses have been loaded", {
+        //             position: "bottom-center",
+        //         });
+        //         setCourses(response.data);
+        //      },
+        //      (error)=>{
+        //          // For error
+        //          console.log(error);
+        //          toast.error("Something went wrong", {
+        //              position: "bottom-center",
+        //          });
+        //      }
+        //  );
+
+
+        fetch(`/dbcollection`)
+        .then((response) => response.json())
+        .then((data) => console.log('This is your data', data)
+        
+        );
+        setCourses(data);
      } ;
 
      //Calling loading course from server
