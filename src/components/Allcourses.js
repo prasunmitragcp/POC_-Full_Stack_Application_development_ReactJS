@@ -31,24 +31,22 @@ const Allcourses=()=>{
             
         }
 
-         fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`, {
-             mode: 'no-cors',
-             method: 'GET',
-             headers: {
+         fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
+            method: 'GET',
+            mode: 'no-cors',
+            headers: {
                 'Content-Type': 'application/json'
-              }
-            }).then(
-             response => response.json()).then(data => {
+          },
+         }).then(
+             (response)=>{
                 //success
                 //console.log(response);
                 
-                console.log("response.data: "+data.data);
-            
-                
+                console.log(response.data);
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
-                setCourses(data.data);
+                setCourses(response.data);
              },
              (error)=>{
                  // For error
