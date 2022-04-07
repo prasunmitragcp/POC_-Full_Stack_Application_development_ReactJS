@@ -29,20 +29,15 @@ const Allcourses=()=>{
 
 
 
-        fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`, {
-            crossDomain:true,
-            method: 'GET',
-            headers: {'Content-Type':'application/json'}
-          })
-            .then(response => response.json())
-            .then(responseJson => {
-              console.log(responseJson);
+        axios.all([axios.get('/dbcollection')])
+            .then(
+                axios.spread((dbcollection) => {
+                const dbcollec = dbcollection.data;
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
 
-
-                setCourses(responseJson);
+                setCourses(dbcollec);
              },
              (error)=>{
                  // For error
@@ -50,9 +45,8 @@ const Allcourses=()=>{
                  toast.error("Something went wrong", {
                      position: "bottom-center",
                  });
-             }
-         );
-     } ;
+             })
+            )} 
 
      //Calling loading course from server
 
