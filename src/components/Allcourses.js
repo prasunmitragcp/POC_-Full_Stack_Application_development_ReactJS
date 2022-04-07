@@ -31,6 +31,7 @@ const Allcourses=()=>{
             
         }
 
+        
          axios.get(`/dbcollection`).then(
              (response)=>{
                 //success
