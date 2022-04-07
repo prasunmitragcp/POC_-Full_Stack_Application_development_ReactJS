@@ -50,7 +50,7 @@ const Allcourses=()=>{
                     position: "bottom-center",
                 });
 
-                const json = JSON.parse(string);
+                const json = JSON.parse(response.text());
 
                 setCourses(json);
              },
