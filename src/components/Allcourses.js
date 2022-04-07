@@ -41,8 +41,7 @@ const Allcourses=()=>{
 
         fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
             mode: 'cors',
-            credentials: 'include',
-            method: 'POST',
+            method: 'GET',
             headers: headers        
          }).then(response => response.json()).then(
              (json =>{
