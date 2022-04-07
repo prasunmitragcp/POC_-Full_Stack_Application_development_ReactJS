@@ -33,11 +33,7 @@ const Allcourses=()=>{
 
 
 
-        fetch("https://javamicroservices.uc.r.appspot.com/dbcollection",{
-            mode: 'no-cors',
-            method: 'GET',
-            headers: headers        
-         }).then(response => response.json()).then
+        fetch(`/dbcollection`).then(response => response.json()).then
              (json =>{
                 //success
                 //console.log(response);
