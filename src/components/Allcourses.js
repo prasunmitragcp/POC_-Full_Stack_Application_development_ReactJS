@@ -39,7 +39,7 @@ const Allcourses=()=>{
               },
              redirect: 'follow'
             }).then(
-             (response => response.json())).then(data => {
+             response => response.json()).then(data => {
                 //success
                 //console.log(response);
                 
