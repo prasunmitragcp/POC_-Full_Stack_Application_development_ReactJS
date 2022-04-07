@@ -38,16 +38,16 @@ const Allcourses=()=>{
                 'Content-Type': 'application/json'
           },
          }).then(
-             ((response) => {response.json()}).then(data=> {
+             (response)=>{
                 //success
                 //console.log(response);
                 
-                console.log("data: "+data);
+                console.log("response.json(): "+response.json());
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
-                setCourses(data);
-             }),
+                setCourses(response.json());
+             },
              (error)=>{
                  // For error
                  console.log(error);
