@@ -8,7 +8,13 @@ import { Toast } from "bootstrap";
 
 
 
-
+const request = {
+    method: 'GET',
+    url: 'https://javamicroservices.uc.r.appspot.com/dbcollection',
+    Proxy: {
+        host: "216.58.212.212"
+    }
+}
 
 
 
@@ -24,27 +30,16 @@ const Allcourses=()=>{
      // Function to call server
      const getAllCoursesFromServer=()=>{
 
-
-
-        let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        headers.append('Accept', 'application/json');
-        headers.append('Access-Control-Allow-Origin', '*');
-
-
-
-        fetch(`/dbcollection`).then(response => response.json()).then
-             (json =>{
+        axios(request).then
+             (response =>{
                 //success
                 //console.log(response);
-                console.log("response.json(): "+json);
+                console.log("response.json(): "+response);
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
 
-                const json1 = JSON.parse(json);
-
-                setCourses(json1);
+                setCourses(response);
              },
              (error)=>{
                  // For error
