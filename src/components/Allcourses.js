@@ -24,20 +24,24 @@ const Allcourses=()=>{
      // Function to call server
      const getAllCoursesFromServer=()=>{
 
+        let config = {
+            headers: {
+                'Access-Control-Allow-Origin': '*'
+            },
+            
+        }
 
-
-
-
-
-        axios.all([axios.get('/dbcollection')])
-            .then(
-                axios.spread((dbcollection) => {
-                const dbcollec = dbcollection.data;
+         fetch(`/dbcollection`).then(
+             (response)=>{
+                //success
+                //console.log(response);
+                
+                const data = response.json();
+                console.log(data);
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
-
-                setCourses(dbcollec);
+                setCourses(data);
              },
              (error)=>{
                  // For error
@@ -45,8 +49,9 @@ const Allcourses=()=>{
                  toast.error("Something went wrong", {
                      position: "bottom-center",
                  });
-             })
-            )} 
+             }
+         );
+     } ;
 
      //Calling loading course from server
 
