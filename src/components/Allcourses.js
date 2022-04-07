@@ -26,13 +26,12 @@ const Allcourses=()=>{
 
         let config = {
             headers: {
-                'Access-Control-Allow-Origin': '*',
-                "Content-Type": "application/json"
+                'Access-Control-Allow-Origin': '*'
             },
             
         }
 
-         axios.get(`/dbcollection`, config).then(
+         axios.get(`/dbcollection`).then(
              (response)=>{
                 //success
                 //console.log(response);
