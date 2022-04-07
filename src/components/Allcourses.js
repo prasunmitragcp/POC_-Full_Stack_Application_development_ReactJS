@@ -24,23 +24,32 @@ const Allcourses=()=>{
      // Function to call server
      const getAllCoursesFromServer=()=>{
 
-        let config = {
-            headers: {
-                'Access-Control-Allow-Origin': '*'
-            },
-            
-        }
 
-         axios.get(`/dbcollection`).then(
+
+
+
+
+
+
+
+
+        fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
+            method: 'GET', 
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+          }
+         }).then(response => response.json()).then(
              (response)=>{
                 //success
                 //console.log(response);
                 
-                console.log(response.data);
+
+                console.log("response.json(): "+response);
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
-                setCourses(response.data);
+                setCourses(response);
              },
              (error)=>{
                  // For error
