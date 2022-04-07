@@ -42,10 +42,9 @@ const Allcourses=()=>{
           }
          }).then(response => response.json()).then(
              (response)=>{
-                //success
-                //console.log(response);
-                
 
+
+                
                 console.log("response.json(): "+response.text());
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
