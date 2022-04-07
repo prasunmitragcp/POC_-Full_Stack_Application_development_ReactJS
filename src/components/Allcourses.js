@@ -31,8 +31,12 @@ const Allcourses=()=>{
             
         }
 
-        
-         axios.get(`/dbcollection`).then(
+         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+          },
+         }).then(
              (response)=>{
                 //success
                 //console.log(response);
