@@ -21,30 +21,24 @@ const Allcourses=()=>{
         document.title="All Courses"
       }, []);
 
+
+
+
+      const url = "https://javamicroservices.uc.r.appspot.com/dbcollection";
+      const config = {
+      url,
+      headers: {
+          'Access-Control-Allow-Origin' : '*',
+          'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+          }
+      }
+
+
      // Function to call server
      const getAllCoursesFromServer=()=>{
 
+        axios.get(config).then(response => {
 
-
-
-
-
-
-
-
-
-        fetch("https://javamicroservices.uc.r.appspot.com/dbcollection",{
-            method: 'GET', 
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-          }
-         }).then(response => response.json()).then(
-             (response)=>{
-
-
-                
                 console.log("response.json(): "+response.text());
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
