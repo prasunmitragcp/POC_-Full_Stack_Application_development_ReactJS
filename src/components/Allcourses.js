@@ -35,6 +35,7 @@ const Allcourses=()=>{
              (response)=>{
                 //success
                 //console.log(response);
+
                 
                 console.log(response.data);
                 toast.success("The courses have been loaded", {
