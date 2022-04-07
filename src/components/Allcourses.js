@@ -35,9 +35,10 @@ const Allcourses=()=>{
 
         fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
             method: 'GET', 
-            mode: 'no-cors',
+            mode: 'cors',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': 'https://fdreactjspoc.uc.r.appspot.com'
           }
          }).then(response => response.json()).then(
              (response)=>{
