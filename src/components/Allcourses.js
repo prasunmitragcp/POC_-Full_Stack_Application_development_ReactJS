@@ -31,7 +31,7 @@ const Allcourses=()=>{
             
         }
 
-         fetch('https://javamicroservices.uc.r.appspot.com/dbcollection').then(
+         fetch(`/dbcollection`).then(
              (response)=>{
                 //success
                 //console.log(response);
