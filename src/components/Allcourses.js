@@ -43,7 +43,7 @@ const Allcourses=()=>{
             mode: 'cors',
             method: 'GET',
             headers: headers        
-         }).then(response => response.json()).then(
+         }).then(response => response.json()).then
              (json =>{
                 //success
                 //console.log(response);
