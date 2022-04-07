@@ -36,7 +36,6 @@ const Allcourses=()=>{
                 //success
                 //console.log(response);
 
-
                 console.log(response.data);
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
