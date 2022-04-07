@@ -32,7 +32,7 @@ const Allcourses=()=>{
         }
 
          fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`, {
-             mode: 'cors',
+             mode: 'no-cors',
              method: 'GET',
              headers: {
                 'Content-Type': 'application/json'
