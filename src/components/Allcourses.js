@@ -36,8 +36,8 @@ const Allcourses=()=>{
                 //success
                 //console.log(response);
                 
-                console.log(response.data);
-                console.log(response.headers);
+                console.log("response.data: "+response.data);
+                console.log("response.headers: "+response.headers);
                 
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
