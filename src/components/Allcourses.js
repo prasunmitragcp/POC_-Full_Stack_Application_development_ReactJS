@@ -36,20 +36,19 @@ const Allcourses=()=>{
              method: 'GET',
              headers: {
                 'Content-Type': 'application/json'
-              },
-             redirect: 'follow'
+              }
             }).then(
              response => response.json()).then(data => {
                 //success
                 //console.log(response);
                 
-                console.log("response.data: "+data);
+                console.log("response.data: "+data.data);
             
                 
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
-                setCourses(data);
+                setCourses(data.data);
              },
              (error)=>{
                  // For error
