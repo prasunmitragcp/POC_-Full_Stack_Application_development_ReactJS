@@ -8,13 +8,7 @@ import { Toast } from "bootstrap";
 
 
 
-const request = {
-    method: 'GET',
-    url: 'https://javamicroservices.uc.r.appspot.com/dbcollection',
-    Proxy: {
-        host: "216.58.212.212"
-    }
-}
+
 
 
 
@@ -30,16 +24,25 @@ const Allcourses=()=>{
      // Function to call server
      const getAllCoursesFromServer=()=>{
 
-        axios(request).then
-             (response =>{
-                //success
-                //console.log(response);
-                console.log("response.json(): "+response);
+
+
+
+
+
+        fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`, {
+            crossDomain:true,
+            method: 'GET',
+            headers: {'Content-Type':'application/json'}
+          })
+            .then(response => response.json())
+            .then(responseJson => {
+              console.log(responseJson);
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
 
-                setCourses(response);
+
+                setCourses(responseJson);
              },
              (error)=>{
                  // For error
