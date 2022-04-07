@@ -42,11 +42,11 @@ const Allcourses=()=>{
                 //success
                 //console.log(response);
                 
-                console.log("response.json().data: "+response.json());
+                console.log("response.json().data: "+response);
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
-                setCourses(response.json());
+                setCourses(response);
              },
              (error)=>{
                  // For error
