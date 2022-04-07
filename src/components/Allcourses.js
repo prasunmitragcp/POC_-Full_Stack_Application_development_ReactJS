@@ -26,7 +26,13 @@ const Allcourses=()=>{
 
 
 
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Accept', 'application/json');
 
+        headers.append('Access-Control-Allow-Origin', 'https://fdreactjspoc.uc.r.appspot.com');
+        headers.append('Access-Control-Allow-Credentials', 'true');
+        headers.append('GET', 'POST', 'OPTIONS');
 
 
 
@@ -34,23 +40,22 @@ const Allcourses=()=>{
 
 
         fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
-            method: 'GET', 
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json'
-          }
+            mode: 'cors',
+            credentials: 'include',
+            method: 'POST',
+            headers: headers        
          }).then(response => response.json()).then(
-             (response)=>{
+             (json =>{
                 //success
                 //console.log(response);
-                console.log("response.json(): "+response);
+                console.log("response.json(): "+json);
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
 
-                const json = JSON.parse(response);
+                const json1 = JSON.parse(json);
 
-                setCourses(json);
+                setCourses(json1);
              },
              (error)=>{
                  // For error
