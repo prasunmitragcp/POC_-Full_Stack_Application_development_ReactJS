@@ -31,22 +31,21 @@ const Allcourses=()=>{
             
         }
 
-         fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
-            method: 'GET',
+         axios.get(`https://javamicroservices.uc.r.appspot.com/dbcollection`,{
             mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json'
           },
-         }).then((response) => response.json()).then(
-             (responsejson)=>{
+         }).then(
+             (response)=>{
                 //success
                 //console.log(response);
                 
-                console.log("response.json().data: "+responsejson);
+                console.log(response.data);
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
-                setCourses(responsejson);
+                setCourses(response.data);
              },
              (error)=>{
                  // For error
