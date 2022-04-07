@@ -32,17 +32,17 @@ const Allcourses=()=>{
         }
 
          fetch(`https://javamicroservices.uc.r.appspot.com/dbcollection`).then(
-             (response)=>response.json()).then((data)=>{
+             (response)=>{
                 //success
                 //console.log(response);
                 
-                console.log("response.data: "+data);
+                console.log("response.data: "+response.data);
             
                 
                 toast.success("The courses have been loaded", {
                     position: "bottom-center",
                 });
-                setCourses(data);
+                setCourses(response.data);
              },
              (error)=>{
                  // For error
