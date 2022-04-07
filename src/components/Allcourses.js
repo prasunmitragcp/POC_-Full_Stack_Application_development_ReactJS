@@ -30,10 +30,6 @@ const Allcourses=()=>{
         headers.append('Content-Type', 'application/json');
         headers.append('Accept', 'application/json');
         headers.append('Access-Control-Allow-Origin', 'https://fdreactjspoc.uc.r.appspot.com');
-        
-        headers.append('GET', 'POST', 'OPTIONS');
-
-
 
         fetch("https://javamicroservices.uc.r.appspot.com/dbcollection",{
             mode: 'cors',
