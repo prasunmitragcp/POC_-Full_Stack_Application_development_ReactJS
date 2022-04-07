@@ -38,7 +38,7 @@ const Allcourses=()=>{
             mode: 'cors',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'https://fdreactjspoc.uc.r.appspot.com'
+                'Access-Control-Allow-Origin': '*'
           }
          }).then(response => response.json()).then(
              (response)=>{
