@@ -12,7 +12,6 @@ import {
     Button,
     Container,
 } from "reactstrap";
-import Updatecourse from "./Updatecourse";
 import { Redirect } from "react-router-dom";
 
 
