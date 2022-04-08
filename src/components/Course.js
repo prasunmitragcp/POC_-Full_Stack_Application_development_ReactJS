@@ -16,7 +16,7 @@ const Course=({course, update})=>{
 
 
         const deleteCourse =(id)=>{
-            axios.delete(`/dbcollection/${id}`).then(
+            axios.delete(`https://javamicroservices.uc.r.appspot.com/dbcollection/${id}`).then(
                 (response)=>{
                     toast.success("Course has been deleted");
                     update(id);

@@ -23,7 +23,7 @@ const handleform=(e)=>{
 
 //Creating function to post data on server
 const postDataToServer=(data)=>{
-    axios.post('/dbcollection', data).then(
+    axios.post('https://javamicroservices.uc.r.appspot.com/dbcollection', data).then(
         (response)=>{
             console.log(response);
             console.log("success");
