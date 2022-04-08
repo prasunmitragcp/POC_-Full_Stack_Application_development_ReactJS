@@ -32,11 +32,6 @@ const Course=({course, update})=>{
         }
 
 
-        const updateCourse =(id)=>{
-            console.log("Id: "+id);
-            <Redirect to="/Updatecourse" />
-        }
-
 
 
 
