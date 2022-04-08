@@ -14,6 +14,7 @@ import {
 } from "reactstrap";
 import Updatecourse from "./Updatecourse";
 import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Course=({course, update})=>{
@@ -34,7 +35,7 @@ const Course=({course, update})=>{
 
         const updateCourse =(id)=>{
             console.log("Id: "+id);
-            return <Redirect to="/Updatecourse/:id" />
+            <Link to="/Updatecourse" />
         }
 
 
