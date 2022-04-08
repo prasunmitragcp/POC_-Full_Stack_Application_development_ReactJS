@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { toast } from "react-toastify";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {
     Card,
     CardBody,
@@ -49,9 +49,9 @@ const Course=({course, update})=>{
                 <Button color="danger" onClick={()=>{
                     deleteCourse(course.id);
                 }}>Delete</Button><span style={{marginRight: '.2rem'}}> </span>
-                <Button color="warning ml-3" onClick={()=>{
-                    updateCourse(course.id);
-                }}>Update</Button>
+                <Link to={"update/"+course.id}>
+                <Button color="warning ml-3">Update</Button>
+                </Link>
             </Container>
         </CardBody>
     </Card>
