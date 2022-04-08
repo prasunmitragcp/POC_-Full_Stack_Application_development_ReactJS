@@ -34,7 +34,7 @@ const Course=({course, update})=>{
 
         const updateCourse =(id)=>{
             console.log("Id: "+id);
-            return <Redirect to="/Updatecourse" />
+            <Redirect to="/Updatecourse" />
         }
 
 
