@@ -36,7 +36,7 @@ const Course=({course, update})=>{
             return (
                 <Router>
                     <switch>
-                        <Route exact path="/">
+                        <Route path="/Updatecourse">
                             <Updatecourse />
                         </Route>
                     </switch>
