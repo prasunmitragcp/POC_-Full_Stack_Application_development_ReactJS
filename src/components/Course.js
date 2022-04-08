@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { toast } from "react-toastify";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import {
     Card,
     CardBody,
@@ -11,6 +12,8 @@ import {
     Button,
     Container,
 } from "reactstrap";
+import Updatecourse from "./Updatecourse";
+
 
 const Course=({course, update})=>{
 
@@ -28,10 +31,19 @@ const Course=({course, update})=>{
         }
 
 
-
         const updateCourse =(id)=>{
             console.log("Id: "+id);
+            return (
+                <Router>
+                    <switch>
+                        <Route exact path="/">
+                            <Updatecourse />
+                        </Route>
+                    </switch>
+                </Router>
+            );
         }
+
 
 
 
