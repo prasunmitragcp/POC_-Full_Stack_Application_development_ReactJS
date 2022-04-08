@@ -14,7 +14,6 @@ import {
 } from "reactstrap";
 import Updatecourse from "./Updatecourse";
 import { Redirect } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 
 const Course=({course, update})=>{
@@ -35,7 +34,7 @@ const Course=({course, update})=>{
 
         const updateCourse =(id)=>{
             console.log("Id: "+id);
-            <Link to="/Updatecourse" />
+            return <Redirect to="/Updatecourse" />
         }
 
 
@@ -50,9 +49,9 @@ const Course=({course, update})=>{
                 <Button color="danger" onClick={()=>{
                     deleteCourse(course.id);
                 }}>Delete</Button><span style={{marginRight: '.2rem'}}> </span>
-                <link to='/Updatecourse'>
-                <Button color="warning ml-3" >Update</Button>
-                </link>
+                <Button color="warning ml-3" onClick={()=>{
+                    updateCourse(course.id);
+                }}>Update</Button>
             </Container>
         </CardBody>
     </Card>
