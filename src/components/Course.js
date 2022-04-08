@@ -50,9 +50,9 @@ const Course=({course, update})=>{
                 <Button color="danger" onClick={()=>{
                     deleteCourse(course.id);
                 }}>Delete</Button><span style={{marginRight: '.2rem'}}> </span>
-                <Button color="warning ml-3" onClick={()=>{
-                    updateCourse(course.id);
-                }}>Update</Button>
+                <link to='/Updatecourse'>
+                <Button color="warning ml-3" >Update</Button>
+                </link>
             </Container>
         </CardBody>
     </Card>
