@@ -87,7 +87,8 @@ const Allcourses=()=>{
                 <p>List of Courses are as follows</p>
                 {
                     courses.length> 0? courses.map((item)=>
-                        <Course key={item.id} course={item} update={updateCourses}/>) : "No Courses" }
+                        <Course key={item.id} course={item} update={updateCourses}/>) : "No Courses" 
+                }
         </div>
 
     );

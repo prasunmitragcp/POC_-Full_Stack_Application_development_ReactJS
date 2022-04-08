@@ -29,6 +29,12 @@ const Course=({course, update})=>{
 
 
 
+        const updateCourse =(id)=>{
+            console.log("Id: "+id);
+        }
+
+
+
     return (
     <Card className="text-center">
         <CardBody>
@@ -38,7 +44,9 @@ const Course=({course, update})=>{
                 <Button color="danger" onClick={()=>{
                     deleteCourse(course.id);
                 }}>Delete</Button><span style={{marginRight: '.2rem'}}> </span>
-                <Button color="warning ml-3">Update</Button>
+                <Button color="warning ml-3" onClick={()=>{
+                    updateCourse(course.id);
+                }}>Update</Button>
             </Container>
         </CardBody>
     </Card>
