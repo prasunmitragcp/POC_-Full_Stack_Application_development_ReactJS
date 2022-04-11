@@ -13,7 +13,6 @@ import React from 'react';
 import { Button, Col, Container, Row } from "reactstrap";
 import Menus from './components/Menus';
 import {BrowserRouter as Router, Route} from "react-router-dom"
-import About from './components/About';
 import Photogallery from './components/Photogallery';
 
 
