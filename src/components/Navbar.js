@@ -1,9 +1,8 @@
 
 import { Component } from "react";
-import { navbar } from "reactstrap";
 
 
-export default class navbar extends 
+export default class Navbar extends 
 Component {
     render() {
         return (
