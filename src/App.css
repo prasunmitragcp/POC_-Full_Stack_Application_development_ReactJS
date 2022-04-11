@@ -38,45 +38,14 @@
 }
 
 
-/* Navbar*/
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  width: 100%;
-  padding: 0.75rem 2rem;
-  background: var(--offwhite);
-  z-index: 1;  
+.Logo{
+  background-color: white;
+  padding: 8px;
+  height: 20%;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
 
-.nav-header{
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-btn{
-  background: transparent;
-  border: none;
-}
-
-.nav-icon{
-  font-size: 1.5rem;
-  color: var(--primaryColor);
-}
-
-.nav-links{
-  transition: var(--mainTransition);
-  list-style-type: none;
-}
-
-.nav-links a {
-  display: block;
-  text-decoration: none;
-  padding: 1rem 0;
-  color: var(--mainBlack);
-  transition: var(--mainTransition);
-  text-align: center;
-  
+.Logo img{
+  height: 10%;
 }
