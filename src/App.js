@@ -14,13 +14,10 @@ import { Button, Col, Container, Row } from "reactstrap";
 import Menus from './components/Menus';
 import {BrowserRouter as Router, Route} from "react-router-dom"
 import Photogallery from './components/Photogallery';
-
+import Navbar from './components/Navbar';
 
 
 function App() {
-
-
-  
 
   const btnHandle=()=>
   {
@@ -30,7 +27,9 @@ function App() {
   };
 
   return (
+    
     <div>
+      <Navbar />
       <Router>
         <ToastContainer />
         <Container>
