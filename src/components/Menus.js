@@ -8,7 +8,7 @@ const Menus=()=>{
             <Link className="list-group-item list-group-item-action" tag="a" to="/">Home</Link>
             <Link className="list-group-item list-group-item-action"tag="a" to="/add-course">Add Course</Link>
             <Link className="list-group-item list-group-item-action"tag="a" to="/view-course">View Course</Link>
-            <Link className="list-group-item list-group-item-action"tag="a" to="/photo-gallery">About</Link>
+            <Link className="list-group-item list-group-item-action"tag="a" to="/photo-gallery">Photo Gallery</Link>
             <Link className="list-group-item list-group-item-action"tag="a" to="#!">Contact</Link>
         </ListGroup>
     );
