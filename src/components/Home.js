@@ -6,7 +6,7 @@ import {jumbotron, Button, Container} from "reactstrap"
 const Home=()=>{
 
     useEffect(()=>{
-        document.title="Home || ReactJS POC done by Prasun";
+        document.title="Home";
     },[])
 
     return (

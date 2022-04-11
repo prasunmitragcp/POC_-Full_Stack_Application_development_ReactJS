@@ -3,24 +3,24 @@ import {jumbotron, Button, Container} from "reactstrap"
 
 
 
-const About=()=>{
+const Photogallery=()=>{
 
     useEffect(()=>{
-        document.title="About";
+        document.title="Photo Gallery";
     },[])
 
     return (
         <div>
             <jumbotron className="text-center bg-primary">
-                <h1>About</h1>
+                <h1>Photogallery</h1>
                 <p>
                     Test
                 </p>
-                <Container>
+                {/* <Container>
                     <Button color="primary" outline>Start using my application</Button>
-                </Container>
+                </Container> */}
             </jumbotron>
         </div>
     );
 }
-export default About;
+export default Photogallery;
